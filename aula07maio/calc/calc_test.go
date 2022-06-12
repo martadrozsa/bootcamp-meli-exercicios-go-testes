@@ -77,3 +77,23 @@ func TestSub(t *testing.T) {
 		t.Errorf("A função Sub() retornou o resultado = %v, mas o esperado é %v", result, expectedResult)
 	}
 }
+
+func TestSubNegativeAndPositiveValues(t *testing.T) {
+	num1 := 15
+	num2 := -5
+	expectedResult := 20
+
+	result := Sub(num1, num2)
+
+	assert.Equal(t, expectedResult, result)
+}
+
+func TestDiv(t *testing.T) {
+	num1 := 15
+	num2 := 3
+	expectedResult := 5
+
+	result := Division(num1, num2)
+
+	assert.NotNil(t, expectedResult, result)
+}
